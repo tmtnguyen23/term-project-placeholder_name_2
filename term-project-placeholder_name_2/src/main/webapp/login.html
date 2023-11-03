@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="US-ASCII">
+	<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<title>Login Page</title>
+</head>
+<body>
+	<div class="logo-container" style="display:flex">
+        <img src="logo.png" alt="our company logo" width="100px" height = "100px">
+        <h1> Placeholder Laundromat </h1>
+    </div>
+	
+    <nav>
+       <ul>
+           <li><a href="#">Reservations</a></li>
+           <li><a href="#">New Reservation</a></li>
+           <li><a href="#">Report Issue</a></li>
+           <li><a href="#">Contact us</a></li> 
+       </ul>
+   	</nav>
+	
+
+<form action="LoginServlet" method="post">
+	Username: <input type="text" name="user"><br>
+	Password: <input type="password" name="pwd"><br>
+	<input type="submit" value="Login">
+</form>
+
+</body>
+</html>
