@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 			DBConnection.getDBConnection();
 			connection = DBConnection.connection;
 			
-			String selectSQL = "SELECT * FROM employee_credentials WHERE username LIKE ? and password LIKE ?";
+			String selectSQL = "SELECT * FROM user_info WHERE username LIKE ? and password LIKE ?";
 			preparedStatement = connection.prepareStatement(selectSQL);
 			preparedStatement.setString(1, user);
 			preparedStatement.setString(2, pwd);
