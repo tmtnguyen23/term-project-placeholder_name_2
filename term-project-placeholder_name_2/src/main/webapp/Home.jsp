@@ -36,10 +36,10 @@
 	
     <nav>
        <ul>
-           <li><a href="#">Reservations</a></li>
+           <li><a href="#">View Reservations</a></li>
            <li><a href="#">New Reservation</a></li>
-           <li><a href="#">Report Issue</a></li>
-           <li><a href="#">Contact us</a></li> 
+           <li><a href="#">Manage Account</a></li>
+           <li><a href="#">About Us</a></li> 
        </ul>
    	</nav>
 	
