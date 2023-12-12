@@ -31,7 +31,7 @@
 	
     <div class="logo-container" style="display:flex">
         <img src="logo.png" alt="our company logo" width="100px" height = "100px">
-        <h1> Placeholder Laundromat </h1>
+        <h1>Placeholder Laundromat</h1>
     </div>
 	
     <nav>
