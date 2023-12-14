@@ -37,14 +37,13 @@
 	        <img src="logo.png" alt="our company logo" width="100px" height = "100px">
 	        <h1> Placeholder Laundromat </h1>
 	    </div>
-
     </div>
 	
     <nav>
        <ul>
            <li><a href="#">View Reservations</a></li>
            <li><a href="#">New Reservation</a></li>
-           <li><a href="#">Manage Account</a></li>
+           <li><a href="MngAcct.jsp">Manage Account</a></li>
            <li><a href="#">About Us</a></li> 
        </ul>
    	</nav>
