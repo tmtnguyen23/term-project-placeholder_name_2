@@ -107,9 +107,11 @@
    	<h3>Welcome, <%=user%>! Enter information below to make a new reservation.</h3>
    	<br>
 
-	<form action="Confirmation" method="post">
+	<!-- Find a way to check that confirmation was successfully added before routing to reservation page? -->
+	<form action="Confirmation.jsp" method="post">
 		Date: <input type = "date" id = 'date' name = "date"/><br>
 		Start time: <input type = "time" id = 'start' name = "start" min = "8:00" max = "19:45"/><br>
+		End time: <input type = "time" id = 'end' name = "end" min = "8:15" max = "20:00"/><br>
 		<input type="submit" value="Submit"/><br>
 		
 		<!-- TODO: figure out how to submit reservation ID and username with this form -->

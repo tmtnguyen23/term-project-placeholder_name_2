@@ -96,7 +96,7 @@
     <nav>
        <ul>
            <li><a href="Home.jsp">Reservations</a></li>
-           <li><a href="ReservationForm.js">New Reservation</a></li>
+           <li><a href="ReservationForm.jsp">New Reservation</a></li>
            <li><a href="MngAcct.jsp">Manage Account</a></li> 
            <li><a href="Contact.jsp">Contact Us</a></li> 
        </ul>
