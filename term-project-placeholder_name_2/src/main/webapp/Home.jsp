@@ -45,9 +45,14 @@
 		}
 	%>
 	
-    <div class="logo-container" style="display:flex">
-        <img src="logo.png" alt="our company logo" width="100px" height = "100px">
-        <h1> Placeholder Laundromat </h1>
+	<div class="site-header">
+		<div class="user-container" style="float:right; padding: 10px">
+	       	<p> Logged in as <%=userName %>. <a href="CheckoutPage.jsp">&lt;log out&gt;</a></p>
+	    </div>
+	    <div class="logo-container" style="display:flex">
+	        <img src="logo.png" alt="our company logo" width="100px" height = "100px">
+	        <h1> LaundroMatch </h1>
+	    </div>
     </div>
 	
     <nav>

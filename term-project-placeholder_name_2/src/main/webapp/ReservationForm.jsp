@@ -23,33 +23,14 @@
 <% // Java code goes in this section
 	
 	// set up the database information
-
-	String driverName = "com.mysql.jdbc.Driver";
-	String connectionUrl = "jdbc:mysql://ec2-34-238-172-16.compute-1.amazonaws.com:3306/LaundryDB?allowPublicKeyRetrieval=true&useSSL=false";
-	String userId = "remote";
-	String datapass = "password";
 	
-	Class.forName(driverName);
-
 	// allow access to this page only if session exists/user is signed in
 	String user = null;
-	String pass = null;
-	String fName = null;
-	String lName = null;
-	String pNum = null;
-	String add = null;
-	
 	if(session.getAttribute("user") == null){
 		response.sendRedirect("login.html");
 	} else user = (String) session.getAttribute("user");
 	
 	String userName = null;
-	String password = null;
-	String firstName = null;
-	String lastName = null;
-	String phone = null;
-	String email = null;
-	
 	String sessionID = null;
 	Cookie[] cookies = request.getCookies();
 	
@@ -57,29 +38,6 @@
 		for(Cookie cookie : cookies){
 			if(cookie.getName().equals("user")) userName = cookie.getValue();
 			if(cookie.getName().equals("JSESSIONID")) sessionID = cookie.getValue();
-		}
-		
-		Connection connection = null; 
-		connection = DriverManager.getConnection(connectionUrl, userId, datapass);
-		
-		if (connection != null) {
-			PreparedStatement preparedStatement = null;
-		    
-		    String selectSQL = "SELECT * FROM user_info WHERE username LIKE ?";
-		    String key = userName; 
-		    preparedStatement = connection.prepareStatement(selectSQL);
-		    preparedStatement.setString(1, key);
-		    
-		    ResultSet rs = preparedStatement.executeQuery();
-		    
-		    if (rs.next()) {
-			    firstName = rs.getString("fname").trim();
-		        lastName = rs.getString("lname").trim();
-		        phone = rs.getString("phone").trim();
-		        email = rs.getString("email").trim();
-		    } else {
-		    	System.out.println("Failed to make connection!");
-		    }
 		}
 	}
 %>
@@ -104,10 +62,11 @@
    	</nav>
    	
    	<!-- line below references Java code in Java section above -->
-   	<h3>Welcome, <%=user%>! Enter information below to make a new reservation.</h3>
+   	<h4>Welcome, <%=userName%>! Enter information below to make a new reservation.</h4>
+   	<p id="reservation-block">Your reservation block should start on a quarter hour.</p>
    	<br>
 
-	<form action="Confirmation" method="post">
+	<form action="NewReservationServlet" method="post">
 		Date: <input type = "date" id = 'date' name = "date"/><br>
 		Start time: <input type = "time" id = 'start' name = "start" min = "8:00" max = "19:45"/><br>
 		<input type="submit" value="Submit"/><br>
@@ -123,7 +82,7 @@
   	 		<div class="footer-col">
   	 			<h4>Our address</h4>
   	 			<ul>
-  	 				<li>Placeholder Laundromat</li>
+  	 				<li>LaundroMatch</li>
   	 				<li>6001 Dodge Street</li>
   	 				<li>Omaha, NE 68107</li>
   	 			</ul>

@@ -30,16 +30,16 @@
 	    </div>
 	    <div class="logo-container" style="display:flex">
 	        <img src="logo.png" alt="our company logo" width="100px" height = "100px">
-	        <h1> Placeholder Laundromat </h1>
+	        <h1> LaundroMatch </h1>
 	    </div>
     </div>
 	
     <nav>
        <ul>
-           <li><a href="#">View Reservations</a></li>
-           <li><a href="#">New Reservation</a></li>
+           <li><a href="Home.jsp">View Reservations</a></li>
+           <li><a href="ReservationForm.jsp">New Reservation</a></li>
            <li><a href="MngAcct.jsp">Manage Account</a></li>
-           <li><a href="#">About Us</a></li> 
+           <li><a href="aboutus.html">About Us</a></li> 
        </ul>
    	</nav>
 	
@@ -47,7 +47,7 @@
 		<br>
 		
 		<form action="LogoutServlet" method="post">
-			<input type="submit" value="Logout" >
+			<input id="log-out" type="submit" value="Logout" >
 		</form>
 	</body>
 </html>

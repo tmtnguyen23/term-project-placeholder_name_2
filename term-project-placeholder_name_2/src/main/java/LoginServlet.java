@@ -82,11 +82,14 @@ public class LoginServlet extends HttpServlet {
 		}else{
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.html");
 			PrintWriter out= response.getWriter();
-			out.println("<font color=red>Either user name or password is wrong.</font>");
+			out.println("<font color=red id=\"errormessage\">Either user name or password is wrong.</font>");
 			rd.include(request, response);
 		}
 
 	}
-
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
 
 }

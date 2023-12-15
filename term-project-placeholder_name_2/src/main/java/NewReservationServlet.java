@@ -3,6 +3,7 @@
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -43,6 +44,7 @@ public class NewReservationServlet extends HttpServlet {
 		String userName = (String) session.getAttribute("user");
 			
 		informUser(userName, date, startTime, response);
+		response.sendRedirect("Confirmation.jsp");
 	}
 	
 	void informUser(String username, String date, String startTime, HttpServletResponse response) throws ServletException, IOException{
@@ -55,22 +57,22 @@ public class NewReservationServlet extends HttpServlet {
 			
 			if (date.isEmpty()==false) {
 				// Using 1 as default machine ID below for now
-				String insertSQL = "INSERT INTO reservations(machine_id, username, start_time, end_time) VALUES (1, ?, ?, ?)";
+				String insertSQL = "INSERT INTO reservations(reservation_id, machine_id, username, start_time, end_time) VALUES (default, 1, ?, ?, ?)";
 				String startDateTime = date + " " + startTime;
 				// Time format example: 08:01
 				String formattedEnd = "" + Integer.parseInt(startTime.substring(0, 3)) + "" + Integer.parseInt(startTime.substring(0,startTime.length()))+3 + Integer.parseInt(startTime.substring(4));
 				// TODO: debug
 				System.out.println("" + Integer.parseInt(startTime.substring(0, 3)) + "" + Integer.parseInt(startTime.substring(0,startTime.length()))+3 + Integer.parseInt(startTime.substring(4)));
 				String endDateTime = date + " " + formattedEnd; 
+				System.out.println(endDateTime);
 				preparedStatement = connection.prepareStatement(insertSQL);
 				preparedStatement.setString(1, username);
 				preparedStatement.setString(2, startDateTime);
 				preparedStatement.setString(3, endDateTime);
-				preparedStatement.executeUpdate();
 				preparedStatement.close();
 			} 
 			connection.close();
-			response.sendRedirect("ReservationForm.jsp");
+			
 		} catch (SQLException se) {
 			se.printStackTrace();
 		} catch (Exception e) {

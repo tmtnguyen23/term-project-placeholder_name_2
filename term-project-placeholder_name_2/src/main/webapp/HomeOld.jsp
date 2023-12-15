@@ -35,7 +35,7 @@
 	    </div>
 	    <div class="logo-container" style="display:flex">
 	        <img src="logo.png" alt="our company logo" width="100px" height = "100px">
-	        <h1> Placeholder Laundromat </h1>
+	        <h1> LaundroMatch </h1>
 	    </div>
     </div>
 	
@@ -58,7 +58,7 @@
   	 		<div class="footer-col">
   	 			<h4>Our address</h4>
   	 			<ul>
-  	 				<li>Placeholder Laundromat</li>
+  	 				<li>LaundroMatch</li>
   	 				<li>6001 Dodge Street</li>
   	 				<li>Omaha, NE 68107</li>
   	 			</ul>

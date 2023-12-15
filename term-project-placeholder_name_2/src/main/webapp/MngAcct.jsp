@@ -96,21 +96,21 @@
     <nav>
        <ul>
            <li><a href="Home.jsp">Reservations</a></li>
-           <li><a href="ReservationForm.js">New Reservation</a></li>
+           <li><a href="ReservationForm.jsp">New Reservation</a></li>
            <li><a href="MngAcct.jsp">Manage Account</a></li> 
-           <li><a href="Contact.jsp">Contact Us</a></li> 
+           <li><a href="aboutus.html">About Us</a></li> 
        </ul>
    	</nav>
    	
    	<!-- line below references Java code in Java section above -->
-   	<h3>Welcome, <%=userName%>! Here is your account information.</h3> 
+   	<h3 id="welcome-message">Welcome, <%=userName%>! Here is your account information.</h3> 
        <ul>
        <!-- username, address, etc. (all info from database), delete account functionality, edit all fields, etc. -->
            <li>User name: <%=userName%></li>
-           <li>First name: <%=firstName%></li>
-           <li>Last name: <%=lastName%></li>
-           <li>Phone: <%=phone%></li>
-           <li>Email: <%=email%></li>
+           <li id="first-name">First name: <%=firstName%></li>
+           <li id="last-name">Last name: <%=lastName%></li>
+           <li id="phone">Phone: <%=phone%></li>
+           <li id="email">Email: <%=email%></li>
        </ul>
     <br>
     <br>
@@ -118,7 +118,7 @@
     <p>You only need to fill in the information to the fields you want to change.</p>
 
 	<form action="UpdateInfoServlet" method="post">
-		Password <input type="password" name="pwd"><br>
+		Password <input id="pass" type="password" name="pwd"><br>
 		First name <input type="text" name="fname"><br>
 		Last name <input type="text" name="lname"><br>
 		Phone number <input type="number" name="phone"><br>
