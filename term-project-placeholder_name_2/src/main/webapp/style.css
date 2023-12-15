@@ -60,10 +60,10 @@ nav a:hover {
 }
 
 .logo-container{
-        display: flex;
-        max-width: 1500px;
-        width: 90%;
-        align-items: center;
+    display: flex;
+    max-width: 1500px;
+    width: 90%;
+    align-items: center;
 }
 
 input.formInput {

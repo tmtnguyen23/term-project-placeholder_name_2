@@ -5,12 +5,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-	<title>Login Page</title>
+	<title>Sign up</title>
 </head>
 <body>
 	<div class="logo-container" style="display:flex">
         <img src="logo.png" alt="our company logo" width="100px" height = "100px">
-        <h1> LaundroMatch</h1>
+        <h1> LaundroMatch </h1>
     </div>
 	
     <nav>
@@ -23,12 +23,15 @@
    	</nav>
 	
 
-<form action="LoginServlet" method="post">
-	Username: <input type="text" name="user"><br>
-	Password: <input type="password" name="pwd"><br>
-	<input type="submit" value="Login">
+<form action="SignUpServlet" method="post">
+	Username <input type="text" name="usr"><br>
+	Password <input type="password" name="pwd"><br>
+	First name <input type="text" name="fname"><br>
+	Last name <input type="text" name="lname"><br>
+	Phone number <input type="number" name="phone"><br>
+	Email <input type="text" name="mail"><br>
+	<input type="submit" value="Submit">
 </form>
-<p>No account with us yet? Sign up <a href="signup.html">here</a>.</p>
 
 </body>
 </html>
