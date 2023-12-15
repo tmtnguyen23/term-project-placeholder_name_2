@@ -8,6 +8,8 @@ Here are a few things you might want to know:
 
 database information
 ec2-34-238-172-16.compute-1.amazonaws.com
+
+
 CREATE TABLE user_info (
     username VARCHAR(30) PRIMARY KEY,
     password VARCHAR(30) NOT NULL,
