@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Account</title>
+    <title>Confirmation</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -98,33 +98,12 @@
            <li><a href="Home.jsp">Reservations</a></li>
            <li><a href="ReservationForm.js">New Reservation</a></li>
            <li><a href="MngAcct.jsp">Manage Account</a></li> 
-           <li><a href="Contact.jsp">Contact Us</a></li> 
+           <li><a href="aboutus.html">About Us</a></li> 
        </ul>
    	</nav>
    	
    	<!-- line below references Java code in Java section above -->
-   	<h3>Welcome, <%=userName%>! Here is your account information.</h3> 
-       <ul>
-       <!-- username, address, etc. (all info from database), delete account functionality, edit all fields, etc. -->
-           <li>User name: <%=userName%></li>
-           <li>First name: <%=firstName%></li>
-           <li>Last name: <%=lastName%></li>
-           <li>Phone: <%=phone%></li>
-           <li>Email: <%=email%></li>
-       </ul>
-    <br>
-    <br>
-    <h3>Please the information below to edit your account information.</h3> 
-    <p>You only need to fill in the information to the fields you want to change.</p>
-
-	<form action="UpdateInfoServlet" method="post">
-		Password <input type="password" name="pwd"><br>
-		First name <input type="text" name="fname"><br>
-		Last name <input type="text" name="lname"><br>
-		Phone number <input type="number" name="phone"><br>
-		Email <input type="text" name="mail"><br>
-		<input type="submit" value="Submit">
-	</form>
+   	<h3>Confirmed! Your reservation was added.</h3> 
 
 <!-- TODO: footer section, same as in Home.jsp file. Should we implement this in a shared library? -->
 
