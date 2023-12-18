@@ -1,4 +1,4 @@
-# term-project-placeholder_name_2
+# term-project-placeholder_name2
 This is a shared directory for the term project. Please pull the project and create a different branch if you push your changes back to the repo. 
 
 Here are a few things you might want to know: 
